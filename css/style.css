@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400&family=Roboto:wght@300&display=swap');
+
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Libre Bodoni', serif; */
+
+*{
+    outline: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: all .5s linear;
+}
+
+:root{
+    --gold: #ffd700;
+    --black: #111;
+    --white: #fff;
+    --light-color: #aaa;
+    --bg-color: #222;
+    --black-bg:rgba(18, 18, 18, 0.702);
+    --border: .2rem solid #ffd700;
+    --box-shadow: 0 .2rem .5rem #aaa;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--gold);
+    border-radius: 5rem;
+}
+
+body{
+    background: #111;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 3rem 12rem;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 1.5rem 12rem;
+    background: var(--bg-color);
+}
+
+.header .logo{
+    font-size: 3rem;
+    color: var(--gold);
+    font-family: 'Libre Bodoni', serif;
+}
+
+.header .logo span{
+    font-family: 'Libre Bodoni', serif;
+    color: var(--white);
+}
+
+.navbar a{
+    font-size: 2rem;
+   margin: 0 1rem;
+    color:#ffd700;
+    display: inline-block;
+}
+
+.navbar a:hover{
+    color: var(--white);
+}
+
+.btn{
+    border: var(--border);
+    font-size: 2rem;
+    border-radius: 30px;
+    color: var(--gold);
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover{
+    color: var(--white);
+    border: 2px solid white;
+    
+}
+
+#menu-btn{
+    cursor: pointer;
+    color:var(--gold);
+    font-size: 3rem;    
+    display: none;
+}
+
+.home{
+    background:  linear-gradient(rgba(18, 18, 18, .7),rgb(18, 18, 18, 1)), url('../image/banner1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%; background-attachment: fixed;
+    min-height: 100vh;
+     /* clip-path: circle(100vh at 50% -30vh); */
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+    margin-top: 7rem;
+}
+
+.home .content h3{
+    text-align: center;
+    color: var(--white);
+    font-size: 60px;
+    padding-bottom: 1rem;
+}
+
+.home .btn{
+    margin-left: 100px;
+}
+
+.about .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* gap: 2rem; */
+}
+
+.about .box-container .image{
+    flex: 1 1 42rem;
+}
+
+.about .box-container .image img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.about .box-container .container{
+    flex: 1 1 42rem;  background: var(--bg-color);
+    padding: 0 2rem; box-shadow: var(--box-shadow);
+    border-radius: 10px;
+}
+
+.about .box-container .container h3{
+    font-size: 3rem;
+    color: var(--gold);
+    text-align: center;
+    padding: 10px;
+    font-family:'Libre Bodoni', serif;
+}
+
+.about .box-container .container p{
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+.trainers h3{
+    font-size: 3rem;
+    color: var(--gold);
+    font-family:'Libre Bodoni', serif;
+    text-align: center;
+    padding: 3rem;
+}
+
+.trainers .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 4rem;
+}
+
+.trainers .box-container .box{
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 5rem;
+}
+
+.trainers .box-container .box img{
+   height: 20rem;
+   transition: transform .5s;
+  
+}
+
+.trainers .box-container .box:hover img{
+    transform: scale(1.1);
+}
+
+.trainers .box-container .box h2{
+    padding: 1rem;
+    color: var(--gold);
+    font-family:'Libre Bodoni', serif;
+    font-size: 2rem;
+}
+
+.trainers .box-container .box .share a{
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: var(--black);
+    background: var(--gold);
+    border-radius: 30px;
+    padding: 10px;
+    transition: transform .5s;
+}
+
+.trainers .box-container .box .share a:hover{
+    transform:scale(1.2)
+}
+
+.banner{
+    background: linear-gradient(rgba(18, 18, 18, .7),rgb(18, 18, 18, 1)), url('../image/bg2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 20vh;
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
+.banner h3{
+    text-align: center;
+    font-family:'Libre Bodoni', serif;
+    font-size: 2rem;
+    color: var(--gold);
+    line-height: 2;
+}
+
+
+.banner h2{
+    text-align: center;
+    line-height: 2;
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.banner p{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--white); 
+}
+
+.banner .btn{
+    margin-left: 45%;
+}
+
+
+.classes h2{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--gold);
+    padding-bottom: 20px;
+    font-family:'Libre Bodoni', serif;
+}
+
+.classes .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2rem;
+}
+
+.classes .box-container .box{
+    padding: 2.5rem;
+    /* border: var(--border);
+    box-shadow: var(--box-shadow); */
+    border-radius: 5rem;
+}
+
+.classes .box-container .box img{
+   min-height: 20vh;
+    width: 100%;
+    border-radius: 2rem;
+    transition: transform .5s;
+}
+
+.classes .box-container .box:hover img{
+    transform: scale(1.1);
+}
+
+.classes .box-container .box h3{
+    text-align: center;
+    color: var(--gold);
+    font-size: 3rem;
+    padding: 10px;
+    font-family:'Libre Bodoni', serif;
+}
+
+.classes .box-container .box p{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.plan h2{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--gold);
+    padding-bottom: 4rem;
+    font-family:'Libre Bodoni', serif;
+}
+
+.plan .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap:4rem;;
+}
+
+.plan .box-container .box{
+    box-shadow: var(--box-shadow);
+    padding: 2.5rem 1rem;
+    border: var(--border);
+    border-radius: 5rem;
+    transition: transform .2s;
+}
+
+.plan .box-container .box:hover{
+    padding: 2.5rem;
+    border: 2px solid white;
+    border-radius: 5rem;
+    transform: scale(1.1);
+}
+
+.plan .box-container .box h3{
+    color: var(--gold);
+    font-family:'Libre Bodoni', serif;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 2;
+}
+
+.plan .box-container .box .price{
+    color: var(--gold);
+    font-family:'Libre Bodoni', serif;
+    font-size: 2rem;
+    text-align: center;
+    
+}
+
+.plan .box-container .box .price span{
+    text-transform: none;
+}
+
+.plan .box-container .box ul li{
+    list-style: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.plan .box-container .box  span.icon{
+    font-size: 1.5rem;
+    color: green;
+    padding: 2rem 5rem;
+    font-weight: bolder;
+   
+}
+
+.plan .box-container .box  span.icon-times{
+    font-size: 1.5rem;
+    color: red;
+    padding: 2rem 5rem;
+    font-weight: bolder;
+   
+}
+
+.plan .box-container .box .btn{
+    padding: 1rem 2rem;
+    margin: 0 6rem;
+}
+
+.register h3{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--gold);
+    padding-bottom: 4rem;
+    font-family:'Libre Bodoni', serif;  
+}
+
+.register .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 4rem;
+}
+
+.register .box-container .box{
+    flex: 1 1 42rem;
+}
+
+.register .box-container .box img{
+    width: 100%;
+}
+
+.register .box-container form{
+    flex:1 1 42rem;
+    border-radius: 5rem;
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+}
+
+.register .box-container form:hover{
+    border: 2px solid white;
+}
+  
+.register .box-container form h3{
+    font-family:'Libre Bodoni', serif; 
+    font-size: 3rem;
+    color: var(--gold);
+} 
+
+.register .box-container form input{
+    display: block;
+    background: transparent;
+    outline: none;
+    border: var(--border);
+}
+
+.register .box-container form input:hover{
+    border: 2px solid white;
+}
+
+.register .box-container form .fill{
+    width: 100%;
+    padding: 1.5rem;
+margin: 4rem 0;
+border-radius: 5rem;
+font-size: 1.4rem;
+text-transform: none;
+color: var(--white);
+}
+
+
+
+/* .register .box-container form .btn{
+    margin-left: 35%;
+} */
+
+/* .footer{
+    min-height: 10vh;
+    margin: 10% 0;
+} */
+
+.footer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.footer .container .box{
+    padding: 1rem 0;
+}
+
+
+.footer .container .box .logo {
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    color: var(--gold);
+    font-family:'Libre Bodoni', serif;  
+  }
+
+  .footer .container .box .logo span{
+      color: var(--white);
+  }
+  
+  .footer .container .box h3 {
+    font-size: 2.2rem;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  
+  .footer .container .box p {
+    font-size: 1.4rem;
+    color: #aaa;
+    padding: 1rem 0;
+    line-height: 2;
+  }
+  
+  .footer .container .box p i {
+    padding-right: .5rem;
+    color: var(--gold);
+  }
+  
+  .footer .container .box .share {
+    padding-top: 1rem;
+  }
+  
+  .footer .container .box .share a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    border: 0.2rem solid var(--gold);
+    color: var(--gold);
+    margin-right: .5rem;
+    text-align: center;
+  }
+  
+  .footer .container .box .share a:hover {
+    background: var(--gold);
+    color: #111;
+  }
+  
+  .footer .container .box .links {
+    font-size: 1.5rem;
+    color: #aaa;
+    padding: 1rem 0;
+    display: block;
+    color: var(--gold);
+  }
+  
+  .footer .container .box .links:hover {
+    color: var(--white);
+  }
+  
+  .footer .container .box .links:hover i {
+    padding-right: 2rem;
+  }
+  
+  .footer .container .box .links i {
+    padding-right: .5rem;
+    color: var(--gold);
+  }
+  
+  .footer .container .box form .email {
+    width: 100%;
+    border-radius: 5rem;
+    border: 2px solid var(--gold);
+    background: none;
+    font-size: 1.5rem;
+    text-transform: none;
+    color: #aaa;
+    margin-bottom: 1rem;
+    padding: 1.2rem 1.4rem;
+  }
+
+  .credit h3{
+      text-align: center;
+      color: var(--white);
+      padding-bottom: 2rem;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+  }
+
+  .credit h3 span{
+    font-family:'Libre Bodoni', serif; 
+    color: var(--gold);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: initial;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:99%; left:0; right:0;
+        background:var(--bg-color);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin:4rem 2rem;
+        display: block;
+        text-align: center;
+    }
+
+    .plan .box-container .box .btn{
+        padding: 1rem 1.5rem;
+        margin: 0 5rem;
+    }
+
+}
+
+@media (max-width:460px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+}
